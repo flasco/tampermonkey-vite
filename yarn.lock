@@ -70,11 +70,6 @@
   resolved "https://registry.nlark.com/@types/tampermonkey/download/@types/tampermonkey-4.0.0.tgz#fd654ea1191f6ae7acd7e9ddc19c67ed062a1495"
   integrity sha1-/WVOoRkfaues1+ndwZxn7QYqFJU=
 
-antd-vite-import-plugin@^1.0.3:
-  version "1.0.3"
-  resolved "https://registry.nlark.com/antd-vite-import-plugin/download/antd-vite-import-plugin-1.0.3.tgz#ff84ba0d43c5382a73e5601c0a6bc88878bed6f9"
-  integrity sha1-/4S6DUPFOCpz5WAcCmvIiHi+1vk=
-
 anymatch@~3.1.1:
   version "3.1.2"
   resolved "https://registry.npm.taobao.org/anymatch/download/anymatch-3.1.2.tgz?cache=0&sync_timestamp=1617747544108&other_urls=https%3A%2F%2Fregistry.npm.taobao.org%2Fanymatch%2Fdownload%2Fanymatch-3.1.2.tgz#c0557c096af32f106198f4f4e2a383537e378716"
