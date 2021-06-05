@@ -20,9 +20,8 @@ const generateDevScript = () => {
   const s = prefix + str;
   clipboardy.writeSync(s);
   console.log();
-  console.log(
-    'generate dev script success!, auto copied to clipboard, now you can go to tampermonkey to paste it'
-  );
+  console.log('generate inject script success!');
+  console.log('copied to clipboard, now you can go to tampermonkey and paste it')
 };
 
 generateDevScript();

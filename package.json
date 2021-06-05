@@ -6,6 +6,7 @@
   "license": "MIT",
   "scripts": {
     "dev": "vite",
+    "dev-inject": "node scripts/generate-dev-script",
     "build": "node scripts/build",
     "serve": "vite preview"
   },
