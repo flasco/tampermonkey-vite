@@ -28,6 +28,12 @@ module.exports = defineConfig({
     ],
     // or here
   },
+  server: {
+    hmr: {
+      protocol: 'ws',
+      host: 'localhost',
+    },
+  },
   build: {
     write: false,
     rollupOptions: {

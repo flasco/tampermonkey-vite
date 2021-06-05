@@ -5,7 +5,7 @@ const prefixGenerate = () => {
 // ==UserScript==
 ${prefixGee()}
 // ==/UserScript==
-  `;
+`;
   return str;
 };
 
