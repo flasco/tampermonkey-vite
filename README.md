@@ -48,7 +48,7 @@ there are two dev mode, the first is dev with local page, and the next is dev wi
 yarn build
 ```
 
-and the bundle file will generate at `dist/[pluginName].user.js`
+and the bundle file will be generated at `dist/[pluginName].user.js`
 
 - run `yarn build`
 - the bundle will generate at `dist/[dist-name].user.js`
