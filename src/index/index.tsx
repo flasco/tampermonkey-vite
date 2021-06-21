@@ -1,10 +1,9 @@
-import React from 'react';
-import { Button, Notify } from 'zent';
+import { Button, Message } from '@arco-design/web-react';
 
 import styles from './style.module.scss';
 
 const App = () => {
-  const heee = () => Notify.success('clickkkk!');
+  const heee = () => Message.success('clickkkk!');
   return (
     <div className={styles.container}>
       <Button.Group>

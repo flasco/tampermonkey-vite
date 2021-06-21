@@ -18,14 +18,29 @@
     "@types/tampermonkey": "^4.0.0",
     "clipboardy": "^2.3.0",
     "fs-extra": "^10.0.0",
-    "sass": "^1.34.1",
-    "typescript": "^4.2.3",
-    "vite": "^2.3.5",
-    "vite-plugin-style-import": "^0.10.1"
-  },
-  "dependencies": {
     "react": "^17.0.2",
     "react-dom": "^17.0.2",
-    "zent": "^9.7.0"
+    "sass": "^1.43.3",
+    "typescript": "^4.4.4",
+    "vite": "^2.6.10",
+    "vite-plugin-babel-import": "^2.0.5",
+    "vite-plugin-optimize-persist": "^0.1.0",
+    "vite-plugin-package-config": "^0.0.3"
+  },
+  "dependencies": {
+    "@arco-design/web-react": "^2.23.5"
+  },
+  "vite": {
+    "optimizeDeps": {
+      "include": [
+        "@arco-design/web-react",
+        "@arco-design/web-react/es/button",
+        "@arco-design/web-react/es/button/style/css.js",
+        "@arco-design/web-react/es/message",
+        "@arco-design/web-react/es/message/style/css.js",
+        "react",
+        "react-dom"
+      ]
+    }
   }
 }

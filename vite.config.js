@@ -1,33 +1,26 @@
 const path = require('path');
 const { defineConfig } = require('vite');
-const styleImport = require('vite-plugin-style-import');
+const styleImport = require('vite-plugin-babel-import');
+const OptimizationPersist = require('vite-plugin-optimize-persist');
+const PkgConfig = require('vite-plugin-package-config');
+
 const reqUMDInject = require('./plugins/require-umd-inject');
 
 // https://vitejs.dev/config/
 module.exports = defineConfig({
   plugins: [
-    styleImport.default({
-      libs: [
-        {
-          libraryName: 'zent',
-          esModule: true,
-          resolveStyle: name => {
-            return `zent/css/${name}.css`;
-          },
-        },
-      ],
-    }),
+    PkgConfig.default(),
+    OptimizationPersist.default(),
+    styleImport.default([
+      {
+        libraryName: '@arco-design/web-react',
+        libraryDirectory: 'es',
+        camel2DashComponentName: false,
+        style: name => `@arco-design/web-react/es/${name}/style/css.js`,
+      },
+    ]),
     reqUMDInject(),
   ],
-  resolve: {
-    alias: [
-      {
-        find: '@',
-        replacement: path.resolve(__dirname, 'src'),
-      },
-    ],
-    // or here
-  },
   server: {
     hmr: {
       protocol: 'ws',
@@ -45,6 +38,11 @@ module.exports = defineConfig({
           'react-dom': 'ReactDOM',
         },
       },
+    },
+  },
+  resolve: {
+    alias: {
+      '@': path.resolve(__dirname, 'src'),
     },
   },
 });

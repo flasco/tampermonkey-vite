@@ -5,8 +5,7 @@
 tampermonkey scaffold, uses the following framework:
 
 - react@17 - UMD
-- react-dom@17 - UMD
-- zent@9
+- @arco-design/web-react
 - vite@2
 - typescript@4
 - sass

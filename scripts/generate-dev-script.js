@@ -1,11 +1,14 @@
 const clipboardy = require('clipboardy');
 const usPrefixGenerate = require('./prefix-mix');
+const config = require('../config/tamper');
 
 const generateDevScript = () => {
   const str = `
 (() => {
     unsafeWindow.React = React;
     unsafeWindow.ReactDOM = ReactDOM;
+    // inject grant
+    ${config.grant.map(i => `  unsafeWindow.${i} = ${i};`).join('\n')}
     const injectScript = (url) => {
       var xxx = document.createElement('script');
       xxx.type = 'module';
